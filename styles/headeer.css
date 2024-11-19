@@ -1,0 +1,150 @@
+.cabecalho__menu {
+    width: 1.5em;
+    height: 1.5em;
+    background-image: url("../img/Menu.svg");
+    display: inline-block;
+    margin-top: 50%;
+
+
+}
+
+.cabecalho {
+    background-color: var(--branco);
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+
+}
+
+.container__texto {
+    display: none;
+}
+
+.container {
+    display: flex;
+    gap: 1em;
+    padding: 1em;
+    align-items: center;
+
+}
+
+.lista-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    width: 60vw;
+
+}
+
+.container__botao:checked~.lista-menu {
+    display: block;
+}
+
+.lista-menu__titulo,
+.lista-menu__item {
+    padding: 1em;
+    background-color: var(--branco);
+
+}
+
+.lista-menu__titulo {
+    color: var(--laranja);
+    font-weight: 700;
+}
+
+.lista-menu__link {
+    background: var(--azul);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-transform: uppercase;
+}
+
+.container__botao {
+    display: none;
+
+}
+
+.container__titulo {
+    display: none;
+}
+
+.opcoes {
+    display: none;
+}
+
+.container__titulo--negrito {
+    align-items: center;
+}
+
+
+@media screen and (min-width:1024px) {
+
+    .container__titulo,
+    .container__titulo--negrito {
+        font-family: var(--fonte-secundaria);
+        font-size: 30px;
+    }
+
+    .container__titulo {
+        font-weight: 400;
+        display: block;
+    }
+
+    .container__titulo--negrito {
+        font-weight: 700;
+    }
+
+
+    .opcoes {
+        display: flex;
+        align-items: center;
+    }
+
+    .opcoes__item {
+        padding: 0 1em;
+        text-transform: uppercase;
+        color: black;
+    }
+
+    .opcoes__botão:checked~.lista-menu {
+        display: block;
+        width: auto;
+    }
+
+    .opcoes__botão {
+        display: none;
+    }
+
+    .cabecalho__menu {
+        display: none;
+    }
+    
+}
+
+@media screen and (min-width:1728px) {
+   .container__link {
+    display: flex;
+    align-items: center;
+    color: black;
+    font-size: 20px;
+   }
+
+.container__texto {
+    margin-left: 0.5em;
+    display: block;
+}
+
+.container_imagem-favoritos {
+display: none;
+}
+
+.cabecalho {
+    padding: 0 2em ;
+}
+
+.opcoes {
+margin-right: auto;
+
+}
+}
